@@ -42,22 +42,62 @@ public class SendBirthDateEmailService {
 
   private String createBirthdayEmailBody(String name, List<Drink> drinks) {
     StringBuilder sb = new StringBuilder();
-    sb.append("<h1>생일 축하드립니다, ").append(name).append("님!</h1>");
-    sb.append("<p>지역의 특산주 3종을 추천드립니다:</p>");
-    sb.append("<ul>");
+    sb.append("<!DOCTYPE html>")
+        .append("<html lang=\"ko\">")
+        .append("<head>")
+        .append("<meta charset=\"UTF-8\">")
+        .append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">")
+        .append("<title>특산주 추천 서비스 메일 발송</title>")
+        .append("</head>")
+        .append("<body style=\"width: 800px; margin: 50px auto; color: #24201A; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif; border-right: 1px solid #F3F4F8; border-bottom: 1px solid #F3F4F8; border-left: 1px solid #F3F4F8; letter-spacing: -0.6px;\">")
+        .append("<header style=\"display: flex; justify-content: space-between; align-items: center; padding: 20px; border-top: 7px solid transparent; border-image: linear-gradient(to right, #FAE831, #FFB644) 1;\">")
+        .append("<img src=\"https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd07jr5%2FbtsJV1t2kMh%2F9GY5hastcYhQk71sbKHY60%2Fimg.png\" alt=\"오늘한잔\" loading=\"lazy\" style=\"width: 140px;\">")
+        .append("<img src=\"https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbzHgBN%2FbtsJWQ6dSpN%2Fba1xDbUJgjFFd9JEoJsW11%2Fimg.png\" alt=\"오늘한잔\" loading=\"lazy\" style=\"width: 70px;\">")
+        .append("</header>")
+        .append("<h2 style=\"display: inline-block; margin: 0 0 20px 20px; box-shadow: inset 0 -10px #FAE831; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif;\">")
+        .append("생일 축하드립니다, ").append(name).append("님!</h2>")
+        .append("<p style=\"padding: 0 20px; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif; font-size: 16px;\">")
+        .append("지역의 특산주 3종을 추천드립니다:</p>");
 
     for (Drink drink : drinks) {
-      sb.append("<li>")
-          .append("<b>").append(drink.getName()).append("</b><br>")
-          .append("설명: ").append(drink.getDescription()).append("<br>")
-          .append("도수: ").append(drink.getDegree()).append("도<br>")
-          .append("당도: ").append(drink.getSweetness()).append("<br>")
-          .append("가격: ").append(drink.getCost()).append("원<br>")
-          .append("</li>");
+      sb.append("<table style=\"margin: 30px 20px; padding: 20px; background-color: #F3F4F8; border-radius: 15px;\">")
+          .append("<thead>")
+          .append("<tr style=\"height: 40px; font-size: 18px; text-align: left;\">")
+          .append("<th>🍶 ").append(drink.getName()).append("</th>")
+          .append("</tr>")
+          .append("</thead>")
+          .append("<tbody>")
+          .append("<tr style=\"margin: 15px 0; font-size: 14px; display: flex; justify-content: flex-start; align-items: flex-start;\">")
+          .append("<td class=\"desc-title\" style=\"font-weight: bold; display: inline-block; width: 60px;\"><span style=\"color: #FFB644;\">✔</span> 정보</td>")
+          .append("<td class=\"desc\" style=\"width: calc(100% - 60px);\">").append(drink.getDescription()).append("</td>")
+          .append("</tr>")
+          .append("<tr style=\"margin: 15px 0; font-size: 14px; display: flex; justify-content: flex-start; align-items: flex-start;\">")
+          .append("<td class=\"desc-title\" style=\"font-weight: bold; display: inline-block; width: 60px;\"><span style=\"color: #FFB644;\">✔</span> 도수</td>")
+          .append("<td class=\"desc\" style=\"width: calc(100% - 60px);\">").append(drink.getDegree()).append("%</td>")
+          .append("</tr>")
+          .append("<tr style=\"margin: 15px 0; font-size: 14px; display: flex; justify-content: flex-start; align-items: flex-start;\">")
+          .append("<td class=\"desc-title\" style=\"font-weight: bold; display: inline-block; width: 60px;\"><span style=\"color: #FFB644;\">✔</span> 당도</td>")
+          .append("<td class=\"desc\" style=\"width: calc(100% - 60px);\">").append(drink.getSweetness()).append("</td>")
+          .append("</tr>")
+          .append("<tr style=\"margin: 15px 0; font-size: 14px; display: flex; justify-content: flex-start; align-items: flex-start;\">")
+          .append("<td class=\"desc-title\" style=\"font-weight: bold; display: inline-block; width: 60px;\"><span style=\"color: #FFB644;\">✔</span> 가격</td>")
+          .append("<td class=\"desc\" style=\"width: calc(100% - 60px);\">").append(drink.getCost()).append("원</td>")
+          .append("</tr>")
+          .append("</tbody>")
+          .append("</table>");
     }
 
-    sb.append("</ul>");
-    sb.append("<p>즐거운 하루 되세요!</p>");
+    sb.append("<p style=\"margin-bottom: 20px; padding: 0 20px; line-height: 1.8; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif; font-size: 16px;\">")
+        .append("더욱 편리하고 안전한 서비스를 위해 노력하는 오늘 한 잔이 되겠습니다. <br /> 감사합니다.")
+        .append("</p>")
+        .append("<p style=\"margin-bottom: 30px; padding: 0 20px; font-size: 14px; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif;\">")
+        .append("이 메일은 <a href=\"https://coding-bankatgan.vercel.app\" style=\"color: #FFB644; text-decoration: none;\">오늘 한 잔 특산주 추천 서비스</a>에서 발송되었습니다.")
+        .append("</p>")
+        .append("<footer style=\"padding: 5px 0; font-size: 13px; text-align: center; background-color: #FFB644; color:#FFFFFF; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Apple Gothic', sans-serif;\">")
+        .append("© 2024. One Drink Today Media All Rights Reserved.")
+        .append("</footer>")
+        .append("</body>")
+        .append("</html>");
 
     return sb.toString();
   }
