@@ -216,16 +216,16 @@
 ## 6. 앱 시연 영상  
 | **기능**                          | **영상보기 링크** |
 |-----------------------------------|-------------------|
-| **회원가입 / 일반 & 소셜 로그인** | [영상보기](https://develop-growth.notion.site/11304c4c306b81a097c5c9100a6316fa?pvs=4) |
-| **비밀번호 찾기**                 | [영상보기](https://develop-growth.notion.site/11304c4c306b81398c0ff69868fbe7f0?pvs=4) |
-| **마이 페이지**                   | [영상보기](https://develop-growth.notion.site/11304c4c306b8156abdbe9af80bc327a?pvs=4) |
-| **특산주 등록 / 매니저 승인**     | [영상보기](https://develop-growth.notion.site/11304c4c306b81ca842cd230aa1ef7e7?pvs=4) |
-| **게시글 / 댓글 작성**            | [영상보기](https://develop-growth.notion.site/11304c4c306b81f1bc2aee01f258c580?pvs=4) |
-| **특산주 & 태그 검색 / 자동완성** | [영상보기](https://develop-growth.notion.site/11304c4c306b81a5a68acd0bf8d422e6?pvs=4) |
-| **태그 팔로우 추가 / 삭제**       | [영상보기](https://develop-growth.notion.site/11304c4c306b81f0a2afceb86fb4b74d?pvs=4) |
-| **알림 확인**                     | [영상보기](https://develop-growth.notion.site/11304c4c306b81f4ad54fc73c58523bd?pvs=4) |
-| **신고 등록 / 승인**              | [영상보기](https://develop-growth.notion.site/11304c4c306b81749334c59e09fb2e46?pvs=4) |
-| **특산주 추천 (지역 / 생일 / 매월)** | [영상보기](https://develop-growth.notion.site/11304c4c306b817fabc5c983a7245534?pvs=4) |
+| **회원가입 / 일반 & 소셜 로그인** | [영상보기](https://develop-growth.notion.site/11804c4c306b812a8ae8e2f5555fe43f?pvs=4) |
+| **비밀번호 찾기**                 | [영상보기](https://develop-growth.notion.site/11804c4c306b81c5ae01df2c6c6c6455?pvs=4) |
+| **마이 페이지**                   | [영상보기](https://develop-growth.notion.site/11804c4c306b81ad94e1df4041da766a?pvs=4) |
+| **특산주 등록 / 매니저 승인**     | [영상보기](https://develop-growth.notion.site/11804c4c306b8147bb4aea166568428f?pvs=4) |
+| **게시글 / 댓글 작성**            | [영상보기](https://develop-growth.notion.site/11804c4c306b81d19907c3009db1c42e?pvs=4) |
+| **특산주 & 태그 검색 / 자동완성** | [영상보기](https://develop-growth.notion.site/11804c4c306b81e1be77c749937d6f5c?pvs=4) |
+| **태그 팔로우 추가 / 삭제**       | [영상보기](https://develop-growth.notion.site/11804c4c306b8187a781ff38d058e46d?pvs=4) |
+| **알림 확인**                     | [영상보기](https://develop-growth.notion.site/11804c4c306b81ac8fdbe3edb3a1b484?pvs=4) |
+| **신고 등록 / 승인**              | [영상보기](https://develop-growth.notion.site/11804c4c306b8148965ce612b61d10d6?pvs=4) |
+| **특산주 추천 (지역 / 생일 / 매월)** | [영상보기](https://develop-growth.notion.site/11804c4c306b810c84dad88c125caa0c?pvs=4) |
 
 <br>
 
